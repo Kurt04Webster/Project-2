@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Quiz page for "Web Servers – Powering the World Wide Web"
+    - Sets up meta tags, title, and links to external CSS.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Servers – Powering the World Wide Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="Modern_Web_Servers.html">Modern Web Servers</a>
+      <a href="History.html">History</a>
+      <a href="references.html">References</a>
+      <a href="Quiz.html">Quiz</a>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Web Server Quiz</h1>
+    <!-- Quiz Form -->
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. What is a web server responsible for?</p>
+        <label><input type="radio" name="q1" value="a"> Sending emails</label><br>
+        <label><input type="radio" name="q1" value="b"> Handling HTTP requests</label><br>
+        <label><input type="radio" name="q1" value="c"> Managing databases</label><br>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Which of the following is a popular open-source web server?</p>
+        <label><input type="radio" name="q2" value="a"> Caddy</label><br>
+        <label><input type="radio" name="q2" value="b"> Apache</label><br>
+        <label><input type="radio" name="q2" value="c"> IIS</label><br>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. Who created Nginx?</p>
+        <label><input type="radio" name="q3" value="a"> Tim Berners-Lee</label><br>
+        <label><input type="radio" name="q3" value="b"> Igor Sysoev</label><br>
+        <label><input type="radio" name="q3" value="c"> Bill Gates</label><br>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. Fill in the blank: The first web server was created at ______.</p>
+        <input type="text" name="q4">
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. Which of the following are modern web servers? (Select all that apply)</p>
+        <label><input type="checkbox" name="q5" value="a"> Apache</label><br>
+        <label><input type="checkbox" name="q5" value="b"> IIS</label><br>
+        <label><input type="checkbox" name="q5" value="c"> Nginx</label><br>
+        <label><input type="checkbox" name="q5" value="d"> FrontPage Server Extensions</label><br>
+      </div>
+
+      <!-- Quiz Buttons -->
+      <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+      <button type="reset" onclick="resetQuiz()">Restart Quiz</button>
+    </form>
+
+    <!-- Quiz Result Output -->
+    <div id="result"></div>
+  </main>
+
+  <!-- Quiz Logic Script -->
+  <script>
+    /**
+     * Handles quiz submission, checks answers, and displays results.
+     */
+    function submitQuiz() {
+      // Correct answers for each question
+      const answers = {
+        q1: 'b', // Handling HTTP requests
+        q2: 'b', // Apache
+        q3: 'b', // Igor Sysoev
+        q4: 'cern', // CERN
+        q5: ['a', 'b', 'c'] // Apache, IIS, Nginx
+      };
+
+      let score = 0;
+      let output = '';
+      const totalQuestions = 5;
+
+      // Get user answers
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      const q4 = document.querySelector('input[name="q4"]').value.trim().toLowerCase();
+      const q5 = [...document.querySelectorAll('input[name="q5"]:checked')].map(cb => cb.value);
+
+      // Check answers and build feedback
+      if (q1 && q1.value === answers.q1) {
+        score++;
+        output += '<p>Q1: Correct</p>';
+      } else {
+        output += '<p>Q1: Incorrect (Correct answer: Handling HTTP requests)</p>';
+      }
+
+      if (q2 && q2.value === answers.q2) {
+        score++;
+        output += '<p>Q2: Correct</p>';
+      } else {
+        output += '<p>Q2: Incorrect (Correct answer: Apache)</p>';
+      }
+
+      if (q3 && q3.value === answers.q3) {
+        score++;
+        output += '<p>Q3: Correct</p>';
+      } else {
+        output += '<p>Q3: Incorrect (Correct answer: Igor Sysoev)</p>';
+      }
+
+      if (q4 === answers.q4) {
+        score++;
+        output += '<p>Q4: Correct</p>';
+      } else {
+        output += '<p>Q4: Incorrect (Correct answer: CERN)</p>';
+      }
+
+      // Checkboxes: must match all correct, no extras
+      if (q5.length === answers.q5.length && q5.every(v => answers.q5.includes(v))) {
+        score++;
+        output += '<p>Q5: Correct</p>';
+      } else {
+        output += '<p>Q5: Incorrect (Correct answers: Apache, IIS, Nginx)</p>';
+      }
+
+      // Show score and pass/fail
+      const percentage = (score / totalQuestions) * 100;
+      const pass = score >= 4 ? '<strong class="correct">PASS</strong>' : '<strong class="incorrect">FAIL</strong>';
+      output += `<p>Total Score: ${score}/5 – Percentage: ${percentage.toFixed(2)}% – Result: ${pass}</p>`;
+
+      document.getElementById('result').innerHTML = output;
+    }
+
+    /**
+     * Resets the quiz result output.
+     */
+    function resetQuiz() {
+      document.getElementById('result').innerHTML = '';
+    }
+  </script>
+</body>
+</html>
