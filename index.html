@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    This is the main HTML file for the homepage of your web servers website.
+    - Sets the document type and language.
+    - Includes meta tags for character set and responsive design.
+    - Sets the page title and links to the external CSS stylesheet.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Servers – Powering the World Wide Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    Navigation bar:
+    - Uses a <nav> element for semantic navigation.
+    - Contains a <ul> with class 'menu' for styling.
+    - Each <a> is a navigation link to a different page of the site.
+  -->
+  <nav>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="Modern_Web_Servers.html">Modern Web Servers</a>
+      <a href="History.html">History</a>
+      <a href="references.html">References</a>
+    </ul>
+  </nav>
+  <main>
+    <!--
+      Introduction Section:
+      - Uses a <section> with class 'intro-flex' for a flexbox layout (see CSS).
+      - Contains a div 'intro-container' for the text content.
+      - Each <p> with class 'intro-box' is styled as a rectangular box.
+      - The image with class 'intro-img' is styled and positioned by CSS.
+    -->
+    <section class="intro-flex">
+      <div class="intro-container">
+        <h2>Introduction</h2>
+        <p class="intro-box">The World Wide Web (WWW), a core feature of the modern internet, depends on several key technologies to operate efficiently. Among the most critical is the web server. A web server is responsible for handling HTTP requests, processing them, and delivering the appropriate web content to users across the globe. This process is foundational to the accessibility of all websites and web applications.</p>
+        <p class="intro-box">Technically, a web server is both hardware and software. The hardware is a physical computer that stores website files like HTML, CSS, JavaScript, and multimedia. The software is the server application that interprets browser requests and serves responses. Some of the most widely used server applications include Apache, Nginx, IIS, and newer tools like LiteSpeed and Caddy.</p>
+        <p class="intro-box">Over time, web server technology has evolved from simple static file delivery to dynamic, cloud-integrated, containerized environments capable of scaling to meet the needs of billions of users. Today’s servers operate within complex infrastructure that includes reverse proxies, databases, edge computing, and AI-based automation. This website explores the history, modern landscape, and future of web servers, highlighting key products, organizations, and innovations shaping the field.</p>
+      </div>
+      <img src="a web serv.png" alt="web server image" class="intro-img">
+    </section>
+    <!--
+      Key Terms Section:
+      - Uses a <section> for semantic grouping.
+      - Contains a heading and a <ul> with id 'Key Terms' for important definitions.
+      - Each <li> explains a key web server concept.
+    -->
+    <section>
+      <h2>Key Terms</h2>
+      <ul id="Key Terms">
+        <li><strong>Web server:</strong> Software/hardware that handles web requests and delivers content.</li>
+        <li><strong>HTTP/HTTPS:</strong> Communication protocols used by web browsers and servers.</li>
+        <li><strong>Static/Dynamic content:</strong> Fixed files vs. real-time generated content.</li>
+        <li><strong>Apache, Nginx, IIS:</strong> Popular server software platforms.</li>
+        <li><strong>Serverless:</strong> Cloud-based function hosting without managing servers directly.</li>
+      </ul>
+    </section>
+  </main>
+  <!--
+    Footer:
+    - Contains a <footer> element for semantic structure.
+    - Includes a note about the class project and a link to the course website.
+  -->
+  <footer>
+    <p>This website is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203: Introduction to Web Development</a>.</p>
+  </footer>
+</body>
+</html>
+

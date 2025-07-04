@@ -1,0 +1,209 @@
+/*
+  style.css
+  This file contains all the CSS rules for your multi-page web servers website.
+  Each section is commented to explain what it styles and why.
+*/
+
+body {
+    background-color: #4207a0; /* Sets a deep purple background for the whole site */
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: #333;
+    padding: 18px 0;
+    margin: 32px auto 24px auto;
+    border-radius: 10px;
+    box-shadow: none;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 80%;
+    max-width: 900px;
+    /* Styles the main page heading for prominence */
+}
+
+nav {
+    list-style: none;
+    background-color: #333;
+    color: rgb(55, 13, 193);
+    padding: 1px;
+    overflow: hidden;
+    /* Styles the navigation bar background and removes list bullets */
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    /* Styles navigation links for appearance and spacing */
+}
+nav a:hover {
+    background-color: hsl(253, 86%, 40%);
+    /* Changes nav link background on hover for interactivity */
+}
+
+h2 {
+    background-color: #333;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    /* Styles section headings */
+}
+
+p {
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
+    /* Styles paragraphs for readability and contrast */
+}
+
+li {
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    /* Styles list items for consistency */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    /* Ensures images are responsive and centered by default */
+}
+
+.right-img {
+    max-width: 40%;
+    height: auto;
+    margin: 0 0 20px 24px;
+    float: right;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    /* Styles images that should float right, e.g., in comparison tables */
+}
+
+h3 {
+    background-color: #333;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    /* Styles sub-section headings */
+}
+
+td, th {
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    /* Styles table cells for readability */
+}
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    /* Adds white borders to tables and collapses them for a clean look */
+}
+
+.intro-box {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    min-height: 80px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 20px;
+    font-size: 20px;
+    /* Styles the introduction text boxes for emphasis */
+}
+
+.intro-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 32px 0;
+    /* Creates a two-column flex layout for the intro section */
+}
+
+.intro-container {
+    flex: 1 1 0;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Holds the intro text in the flex layout */
+}
+
+.intro-img {
+    flex: 0 0 35%;
+    max-width: 35%;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    /* Styles the intro image in the flex layout */
+}
+
+#Key\ Terms {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    /* Styles the Key Terms list for left alignment */
+}
+#Key\ Terms li {
+    text-align: left;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 4px 0;
+    border-radius: 8px;
+    /* Styles each Key Term for clarity */
+}
+
+img[alt="Tim Berners-Lee"] {
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 40px 0 24px 32px;
+    float: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    align-self: flex-start;
+    /* Special styling for the Tim Berners-Lee image on the History page */
+}
+
+.history-main-squish {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+    /* Flexbox layout for the early history section */
+}
+
+.history-main-squish .history-text {
+    flex: 1 1 0;
+    max-width: 60%;
+    min-width: 320px;
+    /* Styles the text block in the history flex layout */
+}
+
+a {
+  color: cyan; /* Makes all links cyan for visibility */
+}

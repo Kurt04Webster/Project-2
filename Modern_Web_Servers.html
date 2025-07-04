@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Modern Web Servers page
+    - Sets up the document type, language, and meta tags for responsive design.
+    - Sets the page title and links to the shared CSS stylesheet.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Web Servers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    Navigation bar:
+    - Uses a <nav> element for semantic navigation.
+    - Contains a <ul> with class 'menu' for styling.
+    - Each <a> is a navigation link to a different page of the site.
+  -->
+  <nav>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="Modern_Web_Servers.html">Modern Web Servers</a>
+      <a href="History.html">History</a>
+      <a href="references.html">References</a>
+    </ul>
+  </nav>
+  <main>
+    <!--
+      Main Content:
+      - <h1> is the main heading for the page.
+      - <h2> and <h3> introduce sections and subsections.
+      - Paragraphs describe the current landscape of web servers and their features.
+    -->
+    <h1>Modern Web Servers</h1>
+    <h2>Current Technologies</h2>
+    <p>Apache HTTP Server and Nginx dominate the web server landscape, with Microsoft IIS also serving enterprise environments. Other modern alternatives include LiteSpeed and Caddy Server.</p>
+    <p>Apache remains favored for its open-source flexibility, while Nginx is preferred for handling large volumes of concurrent traffic efficiently.</p>
+    <p>IIS integrates seamlessly with Microsoft technologies, making it ideal for Windows-based enterprise environments. LiteSpeed offers proprietary performance advantages for WordPress and PHP-heavy sites, and Caddy simplifies HTTPS configuration with automatic certificates.</p>
+    <!--
+      Comparison Table Section:
+      - <h3> introduces the table.
+      - The image 'typesofws.png' is floated right using the 'right-img' class.
+      - The table compares major web servers by strengths and use cases.
+    -->
+    <h3>Comparison Table</h3>
+    <img src="typesofws.png" alt="types of web servers" class="right-img">
+    <table>
+      <thead>
+        <tr>
+          <th>Web Server</th>
+          <th>Strengths</th>
+          <th>Ideal Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apache</td>
+          <td>Modular, Open-source, Flexible</td>
+          <td>General-purpose websites, shared hosting</td>
+        </tr>
+        <tr>
+          <td>Nginx</td>
+          <td>High-performance, Scalable, Lightweight</td>
+          <td>High-traffic sites, reverse proxy, load balancing</td>
+        </tr>
+        <tr>
+          <td>IIS</td>
+          <td>Windows integration, GUI tools, Secure</td>
+          <td>Enterprise apps on Windows servers</td>
+        </tr>
+        <tr>
+          <td>LiteSpeed</td>
+          <td>Speed, Caching, WordPress optimization</td>
+          <td>Commercial hosting, performance-focused WordPress sites</td>
+        </tr>
+      </tbody>
+    </table>
+    <!--
+      Deployment Trends Section:
+      - <h3> introduces trends in server deployment.
+      - Describes the use of cloud platforms, containers, Docker, and Kubernetes.
+    -->
+    <h3>Deployment Trends</h3>
+    <p>Cloud platforms and containerized environments are increasingly popular. Servers are now deployed using Docker and Kubernetes, often as part of CI/CD pipelines.</p>
+  </main>
+  <!--
+    Footer:
+    - Contains a <footer> element for semantic structure.
+    - Includes a note about the class project and a link to the course website.
+  -->
+  <footer>
+    <p>This website is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203</a>.</p>
+  </footer>
+</body>
+</html>
+

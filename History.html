@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    History page
+    - Sets up the document type, language, and meta tags for responsive design.
+    - Sets the page title and links to the shared CSS stylesheet.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Servers – Powering the World Wide Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    Navigation bar:
+    - Uses a <nav> element for semantic navigation.
+    - Contains a <ul> with class 'menu' for styling.
+    - Each <a> is a navigation link to a different page of the site.
+  -->
+  <nav>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="Modern_Web_Servers.html">Modern Web Servers</a>
+      <a href="History.html">History</a>
+      <a href="references.html">References</a>
+    </ul>
+  </nav>
+  <!--
+    Main heading for the History page, styled with the 'page-heading' class.
+  -->
+  <h1 class="page-heading">History of Web Servers</h1>
+  <main>
+    <!--
+      Early Development Section:
+      - Uses a flexbox layout (see CSS class 'history-main-squish').
+      - Contains a text block and an image of Tim Berners-Lee.
+    -->
+    <div class="history-main-squish">
+      <div class="history-text">
+        <h2>Early Development</h2>
+        <p>The first web server was developed by Tim Berners-Lee at CERN in 1989. It ran on a NeXT computer and hosted the first website at <a href="http://info.cern.ch" target="_blank">info.cern.ch</a>.</p>
+      </div>
+      <img src="tim.png" alt="Tim Berners-Lee">
+    </div>
+    <!--
+      Apache Section:
+      - Describes the rise of Apache HTTP Server and its impact on open source web hosting.
+    -->
+    <section>
+      <h2>Apache and the Rise of Open Source</h2>
+      <p>Apache HTTP Server, introduced in 1995, rapidly became the most popular server software due to its open-source model, modular design, and extensive community support. It formed the basis of the LAMP stack (Linux, Apache, MySQL, PHP/Perl/Python) and supported scalable, multi-platform websites through the 2000s. Apache introduced critical features such as .htaccess control, mod_rewrite, and logging tools, which gave developers robust control over website behavior.</p>
+    </section>
+    <!--
+      Nginx Section:
+      - Explains the performance improvements and popularity of Nginx.
+    -->
+    <section>
+      <h2>The Nginx Revolution</h2>
+      <p>Launched in 2004, Nginx addressed Apache’s performance bottlenecks by introducing a non-blocking, event-driven architecture. Created by Igor Sysoev, Nginx could handle thousands of simultaneous connections with low memory usage, making it ideal for high-traffic sites. Its adoption by companies like Netflix, Dropbox, and WordPress.com signaled a new era of efficient and scalable web hosting.</p>
+    </section>
+    <!--
+      Server Evolution Section:
+      - Covers IIS, LiteSpeed, Caddy, and the move to virtualization and containers.
+    -->
+    <section>
+      <h2>Server Evolution and Diversification</h2>
+      <p>Microsoft’s Internet Information Services (IIS) became widely adopted in corporate networks using Windows Server. It integrated seamlessly with ASP.NET and Microsoft SQL Server. Concurrently, new players like LiteSpeed introduced advanced caching for CMS platforms like WordPress, and Caddy Server simplified HTTPS setup with automatic certificate provisioning.</p>
+      <p>By the 2010s, web server deployment shifted towards virtualization and containerization, driven by the rise of cloud services such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud. These platforms enabled flexible, on-demand scaling, allowing developers to deploy web servers inside containers using Docker and orchestrate them using Kubernetes.</p>
+    </section>
+    <!--
+      Cloud Era Section:
+      - Describes the impact of cloud-native and serverless architectures.
+    -->
+    <section>
+      <h2>Web Servers in the Cloud Era</h2>
+      <p>Cloud-native architectures redefined how web servers are deployed and managed. Instead of static infrastructure, modern environments use dynamic, auto-scaling instances to respond to traffic demand. Serverless models further abstract server management entirely, letting developers focus on code while the platform handles provisioning and scaling. Examples include AWS Lambda and Google Cloud Functions.</p>
+    </section>
+    <!--
+      Key Organizations Section:
+      - Lists important people and organizations in web server development and standards.
+    -->
+    <section>
+      <h2>Key Organizations and Innovations</h2>
+      <ul>
+        <li><strong>Tim Berners-Lee</strong>: Invented the first web server</li>
+        <li><strong>Apache Software Foundation</strong>: Maintains Apache HTTP Server</li>
+        <li><strong>Igor Sysoev</strong>: Creator of Nginx</li>
+        <li><strong>IETF</strong>: Develops HTTP, TCP, and QUIC standards</li>
+        <li><strong>W3C</strong>: Defines web protocols and standards</li>
+        <li><strong>OWASP</strong>: Provides security guidelines for web applications and servers</li>
+        <li><strong>Cloudflare and Akamai</strong>: Innovators in CDN and edge server technology</li>
+      </ul>
+    </section>
+  </main>
+  <!--
+    Footer:
+    - Contains a <footer> element for semantic structure.
+    - Includes a note about the class project and a link to the course website.
+  -->
+  <footer>
+    <p>This website is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203</a>.</p>
+  </footer>
+</body>
+</html>
+
+
